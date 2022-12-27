@@ -62,4 +62,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean reMiniStresser.sh MiniStresser_B.sh README.md client.c client_bonus.c libft server.c server_bonus.c  

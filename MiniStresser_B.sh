@@ -6,7 +6,7 @@ for i in {1..100000}
 do
 	if [ $PROCCESS -eq 0 ]
 	then
-		echo $(./client_bonus $SERVERID 💔)
+		./client_bonus $SERVERID 💔
 	else
 		kill -1 $(top -l 1 | grep client_bonus | awk '{print $1}')
 	fi

@@ -6,7 +6,7 @@ for i in {1..100000}
 do
 	if [ $PROCCESS -eq 0 ]
 	then
-		./client $SERVERID "WAC"
+		./client $SERVERID "Wydad AC"
 	else
 		kill -1 $(top -l 1 | grep client | awk '{print $1}')
 	fi
