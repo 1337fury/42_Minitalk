@@ -1,5 +1,5 @@
 ## 42 Minitalk
-<img width="100px" align="center" alt="LIBBFT" src="https://user-images.githubusercontent.com/107589431/209883952-29ca7aeb-1ca5-46ed-9d63-90cbaf45aa87.png">
+<img width="100px" align-items="center" alt="LIBBFT" src="https://user-images.githubusercontent.com/107589431/209883952-29ca7aeb-1ca5-46ed-9d63-90cbaf45aa87.png">
 The 42 `minitalk` project is a networking project in which you are required to create a communication system between two programs using only the signals SIGUSR1 and SIGUSR2.
 
 In the `minitalk` project, one program (the sender) sends messages to another program (the receiver) by sending a series of SIGUSR1 and SIGUSR2 signals. The receiver receives these signals and interprets them as binary digits (0 or 1). By combining these binary digits into a series of bytes, the receiver is able to reconstruct the original message sent by the sender.
