@@ -6,7 +6,7 @@
 /*   By: abdeel-o < abdeel-o@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:02:11 by abdeel-o          #+#    #+#             */
-/*   Updated: 2022/12/24 17:02:12 by abdeel-o         ###   ########.fr       */
+/*   Updated: 2022/12/31 08:48:49 by abdeel-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ int	main(int ac, char *argv[])
 		server_id = ft_atoi(argv[1]);
 		while (argv[2][i])
 		{
-			ft_signals(server_id ,argv[2][i]);
+			ft_signals(server_id, argv[2][i]);
 			i++;
 		}
 	}
+	return (0);
 }

@@ -40,7 +40,7 @@ bonus : $(NAME)
 	$(CC) $(CFLAGS) server_bonus.c $< -o $(SERVER_BONUS)
 	$(CC) $(CFLAGS) client_bonus.c $< -o $(CLIENT_BONUS)
 
-all : $(NAME) bonus 
+all : $(NAME) 
 	$(CC) $(CFLAGS) server.c $< -o $(SERVER)
 	$(CC) $(CFLAGS) client.c $< -o $(CLIENT)
 
@@ -62,4 +62,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean reMiniStresser.sh MiniStresser_B.sh README.md client.c client_bonus.c libft server.c server_bonus.c  
+.PHONY : all clean fclean re

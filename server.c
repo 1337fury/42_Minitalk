@@ -6,13 +6,13 @@
 /*   By: abdeel-o < abdeel-o@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:01:39 by abdeel-o          #+#    #+#             */
-/*   Updated: 2022/12/24 17:01:53 by abdeel-o         ###   ########.fr       */
+/*   Updated: 2022/12/31 08:55:06 by abdeel-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 
-int	old;
+int	g_old;
 
 int	ft_recursive_power(int nb, int power)
 {
@@ -42,13 +42,13 @@ void	ft_sighandler(int signal, siginfo_t *info)
 	static int	i;
 	static int	bits[8];
 
-	if (old == 0)
-		old = info->si_pid;
-	else if (old != info->si_pid)
+	if (g_old == 0)
+		g_old = info->si_pid;
+	else if (g_old != info->si_pid)
 	{
 		i = 0;
 		ft_bzero(bits, 8);
-		old = info->si_pid;
+		g_old = info->si_pid;
 	}
 	if (signal == SIGUSR1)
 		bits[i++] = 0;
@@ -74,7 +74,8 @@ int	main(void)
 	ft_printf("Process id: %d\n", pid);
 	sigaction(SIGUSR1, &action, NULL);
 	sigaction(SIGUSR2, &action, NULL);
-	old = 0;
+	g_old = 0;
 	while (1)
 		pause();
+	return (0);
 }
